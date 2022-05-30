@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/production/user.css">
+    <link rel="stylesheet" href="./css/production/modal.css">
+</head>
+
+<body>
+
+    <main>
+        <div class="screen-profile">
+            <div class="profile-img"></div>
+            <div class="profile-info">
+                <div class="top">
+                    <h3 class="userName">alex_707</h3>
+                    <button class="edit_profile">Add photo</button>
+                    <img src="./public/icons/setting.svg" width="40" height="40" alt="">
+                </div>
+                <div class="center">
+                    <div>
+                        <p class="posts">0</p>
+                        <p>Posts</p>
+                    </div>
+                    <div class="circle"></div>
+                    <div>
+                        <p class="followers">123</p>
+                        <p>Followers</p>
+                    </div>
+                    <div class="circle"></div>
+                    <div>
+                        <p class="likes">15k</p>
+                        <p>Likes</p>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <p class="name_surname">Alex Adams</p>
+                    <p class="who_are_you">Student</p>
+                    <p class="comment">hi, i study in wepro</p>
+                </div>
+            </div>
+        </div>
+        <div class="screen-posts">
+            <div class="sections">
+                <div class="my_posts active">
+                    <img src="./public/icons/film 1.svg" alt="">
+                    <p>Posts</p>
+                </div>
+                <div class="saved">
+                    <img src="./public/icons/unsaved.svg" alt="">
+                    <p>Saved</p>
+                </div>
+                <div class="archive">
+                    <img src="./public/icons/archive 1.svg" alt="">
+                    <p>Archive</p>
+                </div>
+            </div>
+            <div class="wrapper"></div>
+        </div>
+        <div class="screen-modal-window">
+            <div class="post-modal-window">
+                <div class="post-img"></div>
+                <div class="post-details">
+                    <div class="account-of-user">
+                        <div class="post-author"></div>
+                        <h3 class="post-userName">alex_707</h3>
+                    </div>
+                    <div class="comments-of-post">
+                        <p class="comment-post"></p>
+                        <div class="item">
+                            <div class="first-comment">
+                                <div class="author"></div>
+                                <p class="userName">alex_707</p>
+                                <p class="comment">Lorem, ipsum dolor.</p>
+                            </div>
+                            <div class="second-comment">
+                                <div class="author"></div>
+                                <p class="userName">alex_707</p>
+                                <p class="comment">Lorem, ipsum dolor.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-footer">
+                        <div class="top">
+                            <div class="left-side">
+                                <img class="img-like" src="./public/icons/unactive-like.svg">
+                                <img class="img-comment" src="./public/icons/comment.svg">
+                                <img class="img-save" src="./public/icons/unsaved.svg">
+                            </div>
+                            <img class="img-archive" src="./public/icons/archive 1.svg" alt="">
+                        </div>
+                        <div class="bottom">
+                            <b class="likes-of-posts">9082 likes</b>
+                            <p class="time-of-publication">4 часа назад</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="background">
+                <img class="close-back" src="./public/icons/close-background.svg" alt="">
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.1/axios.min.js"></script>
+    <script src="./js/account.js"></script>
+    <script src="./js/verify.js"></script>
+    <script src="./components/header.js"></script>
+</body>
+
+</html>

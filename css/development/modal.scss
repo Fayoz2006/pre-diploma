@@ -1,0 +1,143 @@
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.screen-modal-window {
+    .post-modal-window {
+        width: 1382px;
+        height: 870px;
+        position: fixed;
+        top: 50%;
+        left: -100%;
+        transform: translate(-50%, -50%);
+        background-color: #151515;
+        display: flex;
+        transition: 600ms ease all;
+        z-index: 10;
+        .post-img {
+            width: 686px;
+            height: 100%;
+            background: url("https://images.unsplash.com/photo-1653161732526-87ee8fc9e1e8?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387")
+                center center/cover no-repeat;
+        }
+        .post-details {
+            width: 547px;
+            padding: 20px 0px 0px 41px;
+            .account-of-user {
+                display: flex;
+                align-items: center;
+                grid-gap: 15px;
+                .post-author {
+                    width: 80px;
+                    height: 80px;
+                    background: url("../../public/images/user.png") center center/cover no-repeat;
+                    border-radius: 1000px;
+                }
+                .post-userName {
+                    color: #fff;
+                    font-size: 32px;
+                    font-weight: 500;
+                }
+            }
+            .comments-of-post {
+                width: 100%;
+                height: 342px;
+                overflow: scroll;
+                &::-webkit-scrollbar {
+                    width: 0;
+                    background-color: transparent;
+                }
+                .comment-post {
+                    color: #fff;
+                    font-size: 22px;
+                    margin-top: 30px;
+                }
+                .item {
+                    width: 100%;
+                    margin-top: 50px;
+                    .first-comment,
+                    .second-comment {
+                        display: flex;
+                        align-items: center;
+                        .author {
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 1000px;
+                            background: url("../../public/images/user.png") center center/cover no-repeat;
+                            margin-right: 4px;
+                        }
+                        .userName {
+                            color: #fff;
+                            font-size: 16px;
+                            font-weight: 500;
+                            margin-right: 11px;
+                        }
+                        .comment {
+                            color: #fff;
+                            font-size: 16px;
+                            font-weight: 400;
+                        }
+                    }
+                    .second-comment {
+                        margin: 23px 0px 23px 24px;
+                    }
+                }
+            }
+            .post-footer {
+                .top {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 8px;
+                    .left-side {
+                        display: flex;
+                        align-items: center;
+                        grid-gap: 14px;
+                    }
+                    img {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+                .bottom {
+                    .likes-of-posts {
+                        color: #fff;
+                        font-size: 20px;
+                        font-weight: 500;
+                    }
+                    .time-of-publication {
+                        color: rgba(255, 255, 255, 0.57);
+                        font-size: 13px;
+                        margin-top: 3px;
+                    }
+                }
+            }
+        }
+    }
+    .background {
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.74);
+        backdrop-filter: blur(19px);
+        position: fixed;
+        top: 0;
+        left: -100%;
+        z-index: 9;
+        transition: 600ms ease all;
+        .close-back {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 47px;
+            right: 47px;
+        }
+    }
+}

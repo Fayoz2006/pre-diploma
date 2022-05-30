@@ -1,0 +1,299 @@
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #000;
+}
+
+.screen-registration {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    .right-side {
+        width: 350px;
+        padding: 40px 0px;
+        border: 1px solid #fff;
+        box-shadow: 0px 1px 20px 20px rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        .to_come_in,
+        .log_in {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            grid-gap: 24px;
+            form {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                grid-gap: 6px;
+                width: 268px;
+                input {
+                    width: 100%;
+                    height: 38px;
+                    padding: 9px 0px 7px 8px;
+                    border: none;
+                    border-radius: 3px;
+                }
+                ._active {
+                    border: 2px solid green;
+                }
+                ._unactive {
+                    border: 2px solid red;
+                }
+                button {
+                    margin-top: 10px;
+                    width: 100%;
+                    height: 38px;
+                    border: none;
+                    border-radius: 3px;
+                    background-color: rgb(0, 60, 255);
+                    color: #fff;
+                    transition: 300ms linear all;
+                    &:hover {
+                        box-shadow: 0px 8px 15px 4px rgb(8, 52, 102);
+                        transform: scale(1.02);
+                    }
+                }
+            }
+            p {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                grid-gap: 5px;
+                border-radius: 3px;
+                color: #fff;
+                width: 350px;
+                height: 63px;
+                font-size: 14px;
+                b {
+                    color: rgb(0, 110, 255);
+                    cursor: pointer;
+                }
+            }
+            strong {
+                color: #8e8e8e8e;
+                width: 268px;
+                text-align: center;
+                font-size: 17px;
+            }
+        }
+        .unactive {
+            display: none;
+        }
+    }
+    .left-side {
+        width: 468px;
+        height: 634px;
+        background: url("../../public/images/insta_animation.png") center center no-repeat;
+        background-size: contain;
+        position: relative;
+        .animation {
+            width: 250px;
+            height: 538px;
+            position: absolute;
+            right: 60px;
+            top: 28px;
+            img {
+                position: absolute;
+                opacity: 0;
+                transition: 1000ms cubic-bezier(0.4, 0, 1, 1) all;
+                visibility: hidden;
+            }
+            .show_item {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+    .bg-modal {
+        display: none;
+        opacity: 0;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+        transition: 0.5s ease;
+        backdrop-filter: blur(5px);
+    }
+    .instagram {
+        height: 200px;
+        width: 200px;
+        overflow: hidden;
+        border-radius: 35px;
+        position: fixed;
+        top: -100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.5s ease;
+        z-index: 10;
+        margin-top: -100px;
+        margin-left: -100px;
+        animation: animate_logo 10s infinite alternate;
+        &::after {
+            content: "";
+            position: relative;
+            display: block;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2000px;
+            background: linear-gradient(135deg, #5335cf 0%, #de005e 25%, #f66e48 50%, #de005e 75%, #5335cf 100%);
+            animation: animate_bg 10s infinite linear;
+        }
+    }
+    .loading {
+        top: 50%;
+    }
+    .logo {
+        > div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border: #fff 9px solid;
+            z-index: 2;
+            &.logo_light {
+                border: 7px #fff solid;
+                border-radius: 10em;
+                right: 23%;
+                top: 23%;
+                left: auto;
+                animation: animate_light 5s infinite normal;
+            }
+        }
+        &_border {
+            border-radius: 35px;
+            width: 74%;
+            height: 74%;
+            margin-top: -37%;
+            margin-left: -37%;
+            animation: animate_border 5s infinite alternate;
+        }
+        &_circle {
+            width: 48%;
+            height: 48%;
+            border-radius: 10em;
+            margin-top: -24%;
+            margin-left: -24%;
+            animation: animate_circle 5s infinite alternate;
+        }
+    }
+
+    /*list of keyframes*/
+    @keyframes animate_bg {
+        0% {
+            top: 0;
+        }
+        50% {
+            top: -1800px;
+        }
+        100% {
+            top: 0;
+        }
+    }
+
+    @keyframes animate_logo {
+        0% {
+            transform: scale(0);
+            border-radius: 35px;
+        }
+        2.5% {
+            transform: scale(1.1);
+            border-radius: 10em;
+        }
+        5% {
+            transform: scale(1);
+            border-radius: 35px;
+        }
+        96% {
+            transform: scale(1);
+            border-radius: 35px;
+        }
+        98% {
+            transform: scale(1.1);
+            border-radius: 10em;
+        }
+        100% {
+            transform: scale(0);
+        }
+    }
+
+    @keyframes animate_border {
+        0% {
+            border-radius: 10em;
+            transform: scale(0);
+            opacity: 0;
+        }
+        2% {
+            opacity: 0;
+        }
+        18% {
+            border-radius: 35px;
+            transform: scale(1);
+            opacity: 1;
+        }
+        90% {
+            border-radius: 35px;
+            transform: scale(1);
+        }
+    }
+
+    @keyframes animate_circle {
+        0% {
+            transform: scale(0);
+            opacity: 0;
+        }
+        5% {
+            transform: scale(0);
+            opacity: 0;
+        }
+        10% {
+            transform: scale(1.3);
+            opacity: 1;
+        }
+        15% {
+            transform: scale(1);
+        }
+        95% {
+            transform: scale(1);
+            background-color: transparent;
+        }
+        97% {
+            transform: scale(1.2);
+            background-color: #ffffff;
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    @keyframes animate_light {
+        0% {
+            opacity: 0;
+        }
+        20% {
+            opacity: 0;
+        }
+        25% {
+            opacity: 1;
+        }
+        75% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    /*end of keyframes list*/
+}

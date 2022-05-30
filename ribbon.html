@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/production/ribbon.css">
+    <link rel="stylesheet" href="./css/production/modal.css">
+</head>
+
+<body>
+    <aside>
+        <div class="profile">
+            <a class="logo" href="./ribbon.html">
+                <img src="./public/icons/logo.svg" alt="">
+            </a>
+            <div class="profile-img"></div>
+            <div class="profile-info">
+                <div class="top">
+                    <h3 class="userName">alex_707</h3>
+                    <p class="name_surname">Alex Adams</p>
+                    <button class="edit_profile">Add photo</button>
+                </div>
+                <div class="bottom">
+                    <div>
+                        <p class="posts">0</p>
+                        <p>Posts</p>
+                    </div>
+                    <div class="circle"></div>
+                    <div>
+                        <p class="followers">123</p>
+                        <p>Followers</p>
+                    </div>
+                    <div class="circle"></div>
+                    <div>
+                        <p class="likes">15k</p>
+                        <p>Likes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr color="#29292B">
+        <div class="navigation">
+            <h3>Navigation</h3>
+            <div>
+                <img src="./public/icons/home.svg" alt="">
+                <p>Home</p>
+            </div>
+            <div>
+                <img src="./public/icons/unactive-like.svg" alt="">
+                <p>Likes</p>
+            </div>
+            <div>
+                <img src="./public/icons/unsaved.svg" alt="">
+                <p>Saved</p>
+            </div>
+            <div>
+                <img src="./public/icons/setting.svg" alt="">
+                <p>Setting</p>
+            </div>
+            <div>
+                <img src="./public/icons/archive 1.svg" width="31" height="33" alt="">
+                <p>Archive</p>
+            </div>
+            <div class="log-out">
+                <img src="./public/icons/log-out.svg" alt="">
+                <p>Log Out</p>
+            </div>
+        </div>
+    </aside>
+    <main>
+        <div class="screen-all-posts">
+            <!-- Example -->
+            <!-- <div class="item">
+                <div class="top-side">
+                    <div class="author">
+                        <div class="profile-img"></div>
+                        <p class="post-username">alex_007</p>
+                    </div>
+                    <img src="./public/icons/options.svg" alt="">
+                </div>
+                <div class="center-side"></div>
+                <div class="bottom-side">
+                    <div class="top">
+                        <div class="left-side">
+                            <img width="32" height="auto" class="img-like" src="./public/icons/unactive-like.svg">
+                            <img width="35" class="img-comment" src="./public/icons/comment.svg">
+                            <img width="23" class="img-save" src="./public/icons/unsaved.svg">
+                        </div>
+                        <img class="img-archive" src="./public/icons/archive 1.svg" alt="">
+                    </div>
+                    <div class="center">
+                        <b class="likes_of_posts">9082 likes</b>
+                        <p class="show-comments">Посмотреть все коментарии(0)</p>
+                        <p class="time-of-publication">4 часа назад</p>
+                    </div>
+                    <div class="bottom">
+                        <p class="add-comment">Добавить коментарий...</p>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="screen-modal-window">
+            <div class="post-modal-window">
+                <div class="post-img"></div>
+                <div class="post-details">
+                    <div class="account-of-user">
+                        <div class="post-author"></div>
+                        <h3 class="post-userName">alex_707</h3>
+                    </div>
+                    <div class="comments-of-post">
+                        <p class="comment-post"></p>
+                        <div class="item">
+                            <div class="first-comment">
+                                <div class="author"></div>
+                                <p class="userName">alex_707</p>
+                                <p class="comment">Lorem, ipsum dolor.</p>
+                            </div>
+                            <div class="second-comment">
+                                <div class="author"></div>
+                                <p class="userName">alex_707</p>
+                                <p class="comment">Lorem, ipsum dolor.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-footer">
+                        <div class="top">
+                            <div class="left-side">
+                                <img class="img-like" src="./public/icons/unactive-like.svg">
+                                <img class="img-comment" src="./public/icons/comment.svg">
+                                <img class="img-save" src="./public/icons/unsaved.svg">
+                            </div>
+                            <img class="img-archive" src="./public/icons/archive 1.svg" alt="">
+                        </div>
+                        <div class="bottom">
+                            <b class="likes-of-posts">9082 likes</b>
+                            <p class="time-of-publication">4 часа назад</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="background">
+                <img class="close-back" src="./public/icons/close-background.svg" alt="">
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.1/axios.min.js"></script>
+    <script src="./js/ribbon.js"></script>
+    <script src="./js/verify.js"></script>
+    <script src="./components/header.js"></script>
+</body>
+
+</html>

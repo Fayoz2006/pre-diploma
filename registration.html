@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/production/registration.css">
+</head>
+
+<body>
+    <div class="screen-registration">
+        <div class="left-side">
+            <div class="animation">
+                <img class="show_item"
+                    src="https://www.instagram.com/static/images/homepage/screenshots/screenshot1.png/fdfe239b7c9f.png"
+                    alt="">
+                <img src="https://www.instagram.com/static/images/homepage/screenshots/screenshot2.png/4d62acb667fb.png"
+                    alt="">
+                <img src="https://www.instagram.com/static/images/homepage/screenshots/screenshot3.png/94edb770accf.png"
+                    alt="">
+                <img src="https://www.instagram.com/static/images/homepage/screenshots/screenshot4.png/a4fd825e3d49.png"
+                    alt="">
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="to_come_in">
+                <img class="logo" src="public/icons/logo.svg" alt="">
+                <form name="to_come_in">
+                    <input type="text" name="login" placeholder="User name">
+                    <input type="password" data-required="required" name="password" placeholder="Password">
+                    <button>To come in</button>
+                </form>
+                <p>Don't have an account yet?<b class="log-in"> Register</b></p>
+            </div>
+            <div class="log_in unactive">
+                <img class="logo" src="public/icons/logo.svg" alt="">
+                <strong>Зарегистрируйтесь, чтобы смотреть фото и видео ваших друзей.</strong>
+                <form name="log_in" id="register">
+                    <input type="text" data-required="required" name="firstName" placeholder="First Name">
+                    <input type="text" data-required="required" name="secondName" placeholder="Second Name">
+                    <input type="text" name="username" placeholder="User name">
+                    <input type="password" data-required="required" name="password" placeholder="Password">
+                    <button>Log in</button>
+                </form>
+                <p>Have an account?<b class="to-come-in">To come in</b></p>
+            </div>
+        </div>
+        <div class="bg-modal"></div>
+        <div class="instagram">
+            <div class="logo">
+                <div class="logo_border"></div>
+                <div class="logo_circle"></div>
+                <div class="logo_light"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.1/axios.min.js"></script>
+    <script src="./js/registration.js"></script>
+    <script src="./js/user.js"></script>
+</body>
+
+</html>

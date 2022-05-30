@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+
+   <div class="screen-createPost">
+      <form name="createPost">
+         <h3>Create Post</h3>
+         <input type="text" placeholder="userId" name="userId" hidden>
+         <input type="text" placeholder="The picture" name="content">
+         <input type="text" placeholder="Comment" name="text">
+         <button>Create post</button>
+      </form>
+   </div>
+
+   <style>
+      * {
+         padding: 0;
+         margin: 0;
+         outline: none;
+         box-sizing: border-box;
+      }
+
+      body {
+         background-color: #000;
+         font-family: sans-serif;
+      }
+
+      .screen-createPost {
+         width: 350px;
+         position: fixed;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         padding: 40px 0px;
+         border: 1px solid #fff;
+         box-shadow: 0px 1px 20px 20px rgba(255, 255, 255, 0.1);
+         border-radius: 10px;
+      }
+      
+      .screen-createPost h3 {
+         color: #fff;
+         margin-bottom: 10px;
+      }
+
+      .screen-createPost form {
+         /* width: 268px; */
+         display: flex;
+         align-items: center;
+         flex-direction: column;
+         grid-gap: 6px;
+      }
+
+      .screen-createPost form input {
+         width: 268px;
+         height: 38px;  
+         padding: 9px 0px 7px 8px;
+         border: none;
+         border-radius: 3px;
+      }
+
+      .screen-createPost form button {
+         margin-top: 10px;
+         width: 268px;
+         height: 38px;
+         border: none;
+         border-radius: 3px;
+         background-color: rgb(0, 60, 255);
+         color: #fff;
+         transition: 300ms linear all;
+      }
+
+      .screen-createPost form button:hover {
+         box-shadow: 0px 8px 15px 4px rgb(8, 52, 102);
+         transform: scale(1.02);
+      }
+   </style>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.1/axios.min.js"></script>
+   <script src="./js/post.js"></script>
+   <script src="components/header.js"></script>
+</body>
+
+</html>
