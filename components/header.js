@@ -172,7 +172,7 @@ header.innerHTML = `
     <div class="blocks_menu log_out" style="border-bottom: none; color: red;">Log out</div>
 </div>
 <div class="your_friends">
-    <p>Your friends</p>
+    <p>Users:</p>
     <div class="all-users">
         <div class="user-profile">
             <div class="user-profile-img"></div>

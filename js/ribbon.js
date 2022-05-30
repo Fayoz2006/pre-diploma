@@ -97,6 +97,7 @@ function ALL_POSTS(arr) {
         center.classList.add(`center`)
         bottom.classList.add(`bottom`)
         left_side.classList.add(`left-side`)
+        img_options.classList.add(`img-options`)
         img_like.classList.add(`img-like`)
         img_comment.classList.add(`img-comment`)
         img_save.classList.add(`img-save`)
@@ -106,6 +107,7 @@ function ALL_POSTS(arr) {
         time_of_publication.classList.add(`time-of-publication`)
         add_comment.classList.add(`add-comment`)
 
+        img_options.setAttribute(`src`, `./public/icons/options.svg`)
         img_like.setAttribute(`src`, `./public/icons/unactive-like.svg`)
         img_comment.setAttribute(`src`, `./public/icons/comment.svg`)
         img_save.setAttribute(`src`, `./public/icons/unsaved.svg`)

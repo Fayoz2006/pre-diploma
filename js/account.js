@@ -32,6 +32,7 @@ let body = document.querySelector(`body`)
 function ALL_POSTS(arr) {
     arr = arr.filter(item => item.userId._id === userData._id)
     let wrapper = document.querySelector(`.wrapper`)
+    let no_posts = document.createElement(`b`)
     for (let props of arr) {
         let item = document.createElement(`div`)
         let author = document.createElement(`div`)
@@ -63,6 +64,17 @@ function ALL_POSTS(arr) {
             }, 200);
             body.style.overflow = `hidden`
         }
+    }
+    if (wrapper.innerHTML == ``) {
+        wrapper.prepend(no_posts)
+        no_posts.style.color = `rgb(70, 70, 70)`
+        no_posts.style.fontSize = `34px`
+        no_posts.style.position = `absolute`
+        no_posts.style.left = `50%`
+        no_posts.style.transform = `translateX(-50%)`
+        no_posts.innerHTML = `No posts`
+    } else {
+        no_posts.style.display = `none`
     }
 }
 /////////////////////////////////////////////////////
